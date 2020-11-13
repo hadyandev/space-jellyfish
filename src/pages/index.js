@@ -21,6 +21,9 @@ export default function Home() {
       <Helmet>
         <title>{ siteName }</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://app.snipcart.com" />
+        <link rel="preconnect" href="https://cdn.snipcart.com"/>
+        <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.25/default/snipcart.css" />
       </Helmet>
 
       <Section className={styles.homeHeader}>
@@ -40,7 +43,18 @@ export default function Home() {
                   <img src={product.image} />
                   <h2>{ product.name }</h2>
                   <p>{ product.description }</p>
-                  <Button>Add to Cart</Button>
+                  <p>${ product.price }</p>
+                  <Button className="snipcart-add-item"
+                    data-item-id={product.id}
+                    data-item-price="79.99"
+                    data-item-description={product.description}
+                    data-item-image={product.image}
+                    data-item-name={product.id}
+                    data-item-url="/"
+                    data-item-price={product.price}
+                    >
+                    Add to cart
+                  </Button>
                 </li>
               )
             })}
@@ -48,6 +62,8 @@ export default function Home() {
         </Container>
       </Section>
 
+      <script async src="https://cdn.snipcart.com/themes/v3.0.25/default/snipcart.js"/>
+      <div hidden id="snipcart" data-api-key="MzM0OWM3ZTItNWVhYS00YTY2LWIxMTgtMWU2MTk3YWNlMGIyNjM3NDA4NTAxNDU2MDAzMzI1"/>
     </Layout>
   )
 }
