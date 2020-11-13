@@ -1,7 +1,7 @@
 module.exports = {
-  siteName: 'Space Jelly Shop',
-  homepage: 'https://myproduct.com',
-  authorName: 'Colby Fayock',
-  authorUrl: 'https://twitter.com/colbyfayock',
-  supportEmail: 'hello@colbyfayock.com'
+  siteName: 'Space Jellyfish Store Example',
+  homepage: 'https://space-jellyfish.netlify.app',
+  authorName: 'Hadyan Ahmad',
+  authorUrl: 'https://twitter.com/hadyandev',
+  supportEmail: 'hadyan@example.com'
 }
